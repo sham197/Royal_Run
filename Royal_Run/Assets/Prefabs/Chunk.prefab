@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8285542838574622361}
+  - component: {fileID: -513300614998779976}
   m_Layer: 0
   m_Name: Chunk
   m_TagString: Untagged
@@ -32,6 +33,27 @@ Transform:
   - {fileID: 2899863791770712113}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-513300614998779976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860837435505263916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3149cd272607e448801b28d2c932d37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Chunk
+  fencePrefab: {fileID: 3068793134565203582, guid: 01981c8a18ef1414fb9c69fd05d47d0f, type: 3}
+  applePrefab: {fileID: 4142428987042358327, guid: 58439b55bedb1f246abf51710f4d4f61, type: 3}
+  coinPrefab: {fileID: 4390087052779673332, guid: b717177522511454ea4bb98ff444c28f, type: 3}
+  appleSpawnChance: 0.3
+  coinSpawnChance: 0.5
+  lanes:
+  - -2.5
+  - 0
+  - 2.5
 --- !u!1 &3071672882339362827
 GameObject:
   m_ObjectHideFlags: 0
@@ -61,7 +83,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.5, z: 0}
-  m_LocalScale: {x: 10.5, y: 1, z: 10}
+  m_LocalScale: {x: 10, y: 1, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2899863791770712113}
@@ -262,7 +284,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6317427368463412491, guid: 5f28e8a76fb078c4ab5d1543c3a3e4ae, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.5
+      value: 5.342
       objectReference: {fileID: 0}
     - target: {fileID: 6317427368463412491, guid: 5f28e8a76fb078c4ab5d1543c3a3e4ae, type: 3}
       propertyPath: m_LocalPosition.y
@@ -358,7 +380,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8703487618186899191, guid: 3354a2fee23c9fc45a513927cd492e15, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.54
+      value: 2.365
       objectReference: {fileID: 0}
     - target: {fileID: 8703487618186899191, guid: 3354a2fee23c9fc45a513927cd492e15, type: 3}
       propertyPath: m_LocalPosition.y
@@ -424,7 +446,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6317427368463412491, guid: 5f28e8a76fb078c4ab5d1543c3a3e4ae, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.5
+      value: 5.342
       objectReference: {fileID: 0}
     - target: {fileID: 6317427368463412491, guid: 5f28e8a76fb078c4ab5d1543c3a3e4ae, type: 3}
       propertyPath: m_LocalPosition.y
@@ -524,7 +546,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6317427368463412491, guid: 5f28e8a76fb078c4ab5d1543c3a3e4ae, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.5
+      value: -5.35
       objectReference: {fileID: 0}
     - target: {fileID: 6317427368463412491, guid: 5f28e8a76fb078c4ab5d1543c3a3e4ae, type: 3}
       propertyPath: m_LocalPosition.y
@@ -624,7 +646,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6317427368463412491, guid: 5f28e8a76fb078c4ab5d1543c3a3e4ae, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.5
+      value: -5.35
       objectReference: {fileID: 0}
     - target: {fileID: 6317427368463412491, guid: 5f28e8a76fb078c4ab5d1543c3a3e4ae, type: 3}
       propertyPath: m_LocalPosition.y
