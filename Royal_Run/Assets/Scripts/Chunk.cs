@@ -50,7 +50,7 @@ public class Chunk : MonoBehaviour
         if (Random.value > coinSpawnChance || _availableLanes.Count <= 0) return;
 
         var selectedLaneIndex = SelectLaneIndex();
-        const int maxCoinsInPack = 5 + 1;
+        const int maxCoinsInPack = 4 + 1;
         var numOfCoinsInPack = Random.Range(1, maxCoinsInPack);
         var topOfChunksZPos = transform.position.z + (coinSeparationLength * 2f);
         for (var i = 0; i < numOfCoinsInPack; i++)
