@@ -94,7 +94,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 20201, guid: 0000000000000000f000000000000000, type: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: f972dde314210fc4d9cb63da99f52cf1, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -445,6 +445,7 @@ GameObject:
   m_Component:
   - component: {fileID: 465023812}
   - component: {fileID: 465023813}
+  - component: {fileID: 465023814}
   m_Layer: 0
   m_Name: Obstacle_Destroyer_Trigger_Volume
   m_TagString: Untagged
@@ -462,7 +463,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -30, z: 0}
-  m_LocalScale: {x: 300, y: 10, z: 300}
+  m_LocalScale: {x: 300, y: 10, z: 500}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -488,6 +489,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &465023814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 465023811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f94b0d2c7eb1b5340bce0ee7e32f3323, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObstacleDestroyer
 --- !u!1 &608747122
 GameObject:
   m_ObjectHideFlags: 0
@@ -498,6 +511,7 @@ GameObject:
   m_Component:
   - component: {fileID: 608747123}
   - component: {fileID: 608747125}
+  - component: {fileID: 608747128}
   - component: {fileID: 608747124}
   - component: {fileID: 608747126}
   - component: {fileID: 608747127}
@@ -518,8 +532,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1174534518}
   m_Father: {fileID: 0}
@@ -636,6 +650,19 @@ CapsuleCollider:
   m_Height: 1.907555
   m_Direction: 1
   m_Center: {x: 0, y: 0.95309764, z: 0}
+--- !u!114 &608747128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 608747122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42916051142fe194eb0b83d9fdf79b58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerCollisionHandler
+  animator: {fileID: 1174534519}
 --- !u!1001 &772103075
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -840,6 +867,11 @@ MonoBehaviour:
 --- !u!4 &1174534518 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6410221756858730007, guid: dcbc89efbe5bd174b99e07c76bd0b6bf, type: 3}
+  m_PrefabInstance: {fileID: 772103075}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1174534519 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1014860696115371117, guid: dcbc89efbe5bd174b99e07c76bd0b6bf, type: 3}
   m_PrefabInstance: {fileID: 772103075}
   m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
