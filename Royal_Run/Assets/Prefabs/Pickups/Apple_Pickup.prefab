@@ -78,6 +78,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a0c745b300d15d4bb86bc0712201b48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Apple
+  rotationSpeed: 100
+  levelGenerator: {fileID: 3020576151336295154, guid: 98eccf89600f72e4c8ed268d6e457f9d, type: 3}
 --- !u!136 &8633541418438993123
 CapsuleCollider:
   m_ObjectHideFlags: 0

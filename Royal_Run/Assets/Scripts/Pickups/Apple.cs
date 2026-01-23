@@ -3,12 +3,13 @@ using UnityEngine;
 public class Apple : Pickup
 {
     const float AdjustChangeMoveSpeedAmount = 2f;
-    private LevelGenerator _levelGenerator;
-    
-    private void Start()
+    LevelGenerator _levelGenerator;
+
+    public void Init(LevelGenerator levelGenerator)
     {
-        _levelGenerator = FindFirstObjectByType<LevelGenerator>();
+        this._levelGenerator = levelGenerator;
     }
+
     protected override void OnPickup()
     {
         _levelGenerator.ChangeChunkMoveSpeed(AdjustChangeMoveSpeedAmount);
