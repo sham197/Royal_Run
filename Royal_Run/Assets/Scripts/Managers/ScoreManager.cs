@@ -3,23 +3,10 @@ using TMPro;
 
 public class ScoreManager : MonoBehaviour
 {
-    private static ScoreManager Instance { get; set; }
-
+    [SerializeField] private GameManager gameManager;
     [SerializeField] private TMP_Text scoreText;
 
     private int _score;
-
-    private void Awake()
-    {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
-
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
-    }
 
     private void Start()
     {
@@ -28,6 +15,8 @@ public class ScoreManager : MonoBehaviour
 
     public void UpdateScore(int amount)
     {
+        if (gameManager.GameOver) return;
+        
         _score += amount;
         UpdateVisuals();
     }

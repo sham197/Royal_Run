@@ -10,11 +10,14 @@ public class GameManager : MonoBehaviour
 
     private float _timeLeft;
     private bool _gameOver;
+
+    public bool GameOver => _gameOver;
+
     private void Start()
     {
         _timeLeft = startTime;
     }
-    
+
     private void Update()
     {
         UpdateGameTimer();
@@ -22,15 +25,15 @@ public class GameManager : MonoBehaviour
 
     void UpdateGameTimer()
     {
-        if(_gameOver) return;
-        
+        if (_gameOver) return;
+
         _timeLeft -= Time.deltaTime;
         timeText.text = _timeLeft.ToString("0.0");
-        
-        if(_timeLeft <= 0) GameOver();
+
+        if (_timeLeft <= 0) PlayerGameOver();
     }
 
-    private void GameOver()
+    private void PlayerGameOver()
     {
         _gameOver = true;
         playerController.enabled = false;
