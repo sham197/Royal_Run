@@ -17,13 +17,18 @@ public class GameManager : MonoBehaviour
     {
         _timeLeft = startTime;
     }
-
+    
     private void Update()
     {
         UpdateGameTimer();
     }
+    
+    public void ChangeGameTimer(float timeAmount)
+    {
+        _timeLeft += timeAmount;
+    }
 
-    void UpdateGameTimer()
+    private void UpdateGameTimer()
     {
         if (_gameOver) return;
 
