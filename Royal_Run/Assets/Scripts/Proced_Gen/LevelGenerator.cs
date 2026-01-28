@@ -54,7 +54,7 @@ public class LevelGenerator : MonoBehaviour
     {
         var newGravity = Physics.gravity + (Vector3.back * speedAmount);
 
-        newGravity.z = Mathf.Clamp(newGravity.z, -20f, -9.81f);
+        newGravity.z = Mathf.Clamp(newGravity.z, -25f, -15f);
 
         Physics.gravity = newGravity;
     }
@@ -90,7 +90,7 @@ public class LevelGenerator : MonoBehaviour
         }
         else
         {
-            if (chunkPrefabs.Length == 1 || Random.value < 0.5f) chunkToSpawn = chunkPrefabs[0];
+            if (chunkPrefabs.Length == 1 || Random.value < 0.8f) chunkToSpawn = chunkPrefabs[0];
             else chunkToSpawn = chunkPrefabs[Random.Range(1, chunkPrefabs.Length)];
         }
         return chunkToSpawn;
